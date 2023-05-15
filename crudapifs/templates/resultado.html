@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Datos devueltos por la API:</h1>
+
+<ul>
+    {% for dato in datos %}
+    <li>{{ dato }}</li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

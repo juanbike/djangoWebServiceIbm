@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Consulta a API</h1>
+<form method="POST" action="{% url 'consultar' %}">
+    {% csrf_token %}
+    <label for="fecha">Fecha:</label>
+    <input type="text" name="fecha" id="fecha">
+    <br>
+    <label for="numcre">Número de Crédito:</label>
+    <input type="text" name="numcre" id="numcre">
+    <br>
+    <label for="conse">Consecutivo:</label>
+    <input type="text" name="conse" id="conse">
+    <br>
+    <button class="btn btn-primary" type="submit">Enviar consulta</button>
+</form>
+{% endblock %}
